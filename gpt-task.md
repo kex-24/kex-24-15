@@ -1,90 +1,96 @@
-# Galaxy Pets: Collect and Train Your Cosmic Companions
+# Programming Task: FikaBuddy
 
-For this programming assignment in Java, you are stepping into the shoes of a cosmic trainer, embarking on a journey through the universe to collect and train Galaxy Pets. These are mythical creatures with unique abilities and attributes that you'll be modeling in Java.
+### Deadline
+This task should be completed and submitted before the end of the current exercise session.
 
-## Deadline
-This assignment is due before the next scheduled class.
+### Instructions
+For details on how to complete and submit your assignment, refer to the [course instructions](https://example-university.edu/course/cs101/assignments).
 
-## Instructions
-For instructions on how to complete and submit this assignment, please refer to the assignments section of the course instructions reachable via [assignments section of our course webpage](https://assignments.example.com).
+### Preparation
 
-## Preparation
+- Complete Module 2: Exploring Java Classes.
+- Access the learning material: 
+  - Via the course Canvas page, link to Java Programming section
+  - Or directly at [Java Programming Course](https://example-university.edu/course/cs101/resources).
 
-- Complete and understand all questions in Module 2: "Exploring Object-Oriented Programming".
-- Access the OLI material through Canvas or directly via [programming course materials](https://programmingmaterials.example.com).
+### Learning Goals
 
-Note: The OLI material and tasks this year may not perfectly align, so it's okay to read ahead if you did not find everything mentioned.
+This week, you'll learn about:
+* Creating and designing Java classes
+* Implementing instance fields
+* Writing a constructor method
+* Developing getters and setters
+* Employing the dot operator
+* Outputting information to the terminal
+* Understanding of the `main` method
+* Recognizing scope and variable shadowing
 
-## Learning Goals
+### Troubleshooting Guide
 
-The goals for this week include understanding how to:
-- Design Java classes.
-- Implement fields and methods within a class.
-- Utilize the `main` method for testing.
-- Understand the concept of object encapsulation.
-- Manage object interaction within a Java application.
+1. Review this week's [discussion topics](https://example-university.edu/course/cs101/help/discussions).
+2. If your question hasn't been addressed, post it by creating a [New Discussion](https://example-university.edu/course/cs101/help/new-discussion).
+3. Also, consider dropping by the [weekly help session](https://example-university.edu/course/cs101/help/session-hours).
 
-## Troubleshooting Guide
+### Assignment
 
-1. Browse the [posted questions](https://forum.example.com/issues) related to this week's assignment. Are others experiencing the same issue?
-2. If not, create a [New Question](https://forum.example.com/issues/new) with a descriptive title beginning with "Week *x*: *summary of problem*".
-3. Seek out further help at the [weekly help sessions](https://helpsessions.example.com) hosted by our team.
+Your task is to create a Java program that models a Fika meeting in Sweden. In Swedish culture, "Fika" is a concept, often considered essential, which involves taking a break for coffee and a bite to eat with colleagues, friends, or family.
 
-Collaboration with peers is encouraged, but please avoid sharing exact solutions.
+#### 1. Getting Started
 
-## Assignment Details
+Start by creating a new Java file named `Fika.java` in your project's `src` folder. This file will house your `Fika` class.
 
-Your journey through the galactic frontier begins with the creation of unique Galaxy Pets crafted from the essence of cosmic phenomena. Dive into this universe by modeling these creatures in Java. Let your imagination run wild; perhaps a Starlion with the roar of a collapsing star, or a Nebulupi, a wolf made from the gas of a nebulous cloud.
+Start designing your Fika class with attributes that you think are essential for a Fika meeting. Here are some suggestions to get you started:
 
-### Task 1: Class Creation
+- `String` location
+- `String` time
+- `boolean` isCoffeeAvailable
+- `boolean` isSnackAvailable
+- `int` numberOfParticipants
 
-Start by creating a file named `GalaxyPet.java` inside the `src` directory. Declare the GalaxyPet class within this file.
+#### 2. The Fika Participants
 
-### Task 2: Defining Properties
+Next, let's enhance our Fika experience by allowing for multiple participants. Create a `Participant` class with personal attributes such as name and favorite Fika snack.
 
-Our Galaxy Pets need characteristics. Define the following fields within the GalaxyPet class, without assigning any initial values:
+Remember, it becomes clunky to manage multiple participants manually if you were to keep data about each participant directly in your Fika class. Can you think of a better way to manage them within your `Fika` class?
 
-- String name
-- int energyLevel
-- int cosmicPower
-- int speed
-- boolean asleep
+#### 3. Using Constructors
 
-### Task 3: Spawning Galaxy Pets
+We want to make setting up a Fika session as easy as possible. Thus, implement a constructor in your Fika class that takes arguments for the location, time, whether coffee and snacks are available, and the initial number of participants.
 
-In the `main` method of your GalaxyPet class, create and instantiate a "Starlion" with initial values for its characteristics. Use the dot operator to set these attributes directly for now.
+#### 4. Managing Participants
 
-### Task 4: Encapsulation with Getters and Setters
+Implement methods within your Fika class for adding and removing participants. This would typically involve manipulating a list of `Participant` objects. Consider what happens if a participant decides to leave the Fika early.
 
-To encapsulate the inner workings of our Galaxy Pets, change the access modifiers of your fields to `private`. Then, implement getters and setters for each property.
+#### 5. Information Display
 
-### Task 5: Constructing with Constructors
+Develop a method within your Fika class to display all relevant information about the Fika session, including the details about each participant. Use this to quickly get an overview of the upcoming Fika.
 
-Implement a constructor for the GalaxyPet class that allows setting all characteristics upon instantiation. Create a second pet, "Nebulupi", using this constructor.
+#### 6. The Invitation Feature
 
-### Task 6: Display Information
+Implement a feature that allows sending out invitations for the Fika. Each participant should receive a personalized invite with the Fika details. Think about how you would simulate sending an invitation.
 
-Create a method named `displayInfo` within the GalaxyPet class that prints out all information about the pet to the console.
+#### 7. Overloading and Encapsulation
 
-### Task 7: The Cosmic Challenge
+Try overloading the constructor of the Fika class to provide default values for a Fika session. Also, ensure all instance fields in your classes are kept private and accessed through getters and setters.
 
-Galaxy Pets can challenge each other to cosmic duels. Implement a method named `challenge` where one pet can challenge another. The outcome will determine which pet gains cosmic power. Incorporate simple logic based on your chosen attributes.
+#### 8. Wrapping It All Together
 
-### Task 8: Understanding Scope and Shadowing
+Create a `Main` class with a `main` method where you set up a new Fika session, add several participants, display the Fika information, and send out invitations.
 
-Review examples of scope and variable shadowing provided in the reading materials. Be prepared to adjust your implementation if necessary, focusing on proper usage of the `this` keyword.
+#### Bonus: Fika Conversations
 
-## Final Checklist
+For an extra challenge, introduce a method in your Fika class that simulates a conversation among participants. Each participant could have a list of phrases they might say.
 
-- [ ] Created and developed the GalaxyPet class with fields and methods.
-- [ ] Utilized getters and setters for encapsulation.
-- [ ] Implemented constructors for easy object instantiation.
-- [ ] Developed a method displaying a pet's info.
-- [ ] Enabled Galaxy Pets to challenge each other.
+### Checklist
 
-## Bugs and Errors?
+- Fika and Participant classes with appropriate attributes
+- Constructor methods for easy setup
+- Methods to manage Fika participants
+- Information display method
+- Invitation feature
+- Properly encapsulated fields and use of overload constructors
+- A Main class demonstrating the creation and management of a Fika session
 
-If you encounter any inconsistencies or errors with this assignment, please report them by creating a [New Issue](https://forum.example.com/issues/new) with the title "Week *x* Error: *summary of error here*". Contributors identifying bugs will be acknowledged.
+### Additional Notes
 
-
-This personalized task should help the student understand the same core programming concepts as the model task, framed around an engaging theme of collecting and training cosmic creatures.
+If you encounter issues or inconsistencies with the task, reach out by creating a [New Discussion](https://example-university.edu/course/cs101/help/new-discussion) on the course page. Remember, sharing exact code answers is not allowed, but discussing concepts and approaches is encouraged.
